@@ -2,5 +2,7 @@
 
 module DataKind6 where
 
--- how should this be caught?
 data kind K = K
+
+data kind A
+data kind B = A
