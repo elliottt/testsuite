@@ -74,6 +74,11 @@ test('T5611', normal, compile_and_run, [''])
 test('T5238', normal, compile_and_run, [''])
 test('T5866', exit_code(1), compile_and_run, [''])
 
+test('readMVar1', normal, compile_and_run, [''])
+test('readMVar2', normal, compile_and_run, [''])
+test('readMVar3', normal, compile_and_run, [''])
+test('tryReadMVar1', normal, compile_and_run, [''])
+
 # -----------------------------------------------------------------------------
 # These tests we only do for a full run
 
@@ -141,7 +146,7 @@ test('conc030',
      [only_compiler_types(['ghc']), extra_run_opts('+RTS -K4M -RTS')],
 		compile_and_run, [''])
 
-test('conc031', normal, compile_and_run, [''])
+test('conc031', exit_code(1), compile_and_run, [''])
 
 test('conc032', only_compiler_types(['ghc']), compile_and_run, [''])
 test('conc033', normal, compile_and_run, [''])
@@ -233,3 +238,5 @@ test('setnumcapabilities001',
        reqlib('parallel'),
        skip_if_not_smp ],
      compile_and_run, [''])
+
+test('T7970', normal, compile_and_run, [''])

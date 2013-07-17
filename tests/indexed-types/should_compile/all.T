@@ -200,6 +200,8 @@ test('T7082', normal, compile, [''])
 test('Overlap1', normal, compile, [''])
 test('Overlap2', normal, compile, [''])
 test('Overlap12', normal, compile, [''])
+test('Overlap13', normal, compile, [''])
+test('Overlap14', normal, compile, [''])
 test('T7156', normal, compile, [''])
 test('T5591a', normal, compile, [''])
 test('T5591b', normal, compile, [''])
@@ -212,3 +214,16 @@ test('T7804', normal, compile, [''])
 test('T7837', normal, compile, ['-O -ddump-rule-firings'])
 test('T4185', normal, compile, [''])
 
+# Cuased infinite loop in the compiler
+test('T8002',
+     normal,
+     run_command,
+     ['$MAKE -s --no-print-directory T8002'])
+
+# Import and export of associated types
+test('T8011',
+     normal,
+     run_command,
+     ['$MAKE -s --no-print-directory T8011'])
+
+test('T8018', normal, compile, [''])

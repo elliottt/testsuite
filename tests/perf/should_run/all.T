@@ -112,7 +112,8 @@ test('T2902',
      run_command,
      ['$MAKE -s --no-print-directory T2902'])
 test('T149',
-     [expect_broken(149),
+     [ # expect_broken(149),
+       # working (2 Jul 2013, x86-64/Linux)
       extra_clean(['T149_A',    'T149_B',
                    'T149_A.hi', 'T149_B.hi',
                    'T149_A.o',  'T149_B.o'])],
@@ -271,6 +272,21 @@ test('T7797',
                           # expected: 480050944 (amd64/Linux)
       only_ways(['normal'])
       ],
+     compile_and_run,
+     ['-O'])
+
+test('T7954',
+      [stats_num_field('bytes allocated', 
+                      [(wordsize(32), 1380051408, 10),
+                       (wordsize(64), 2720051528, 10)]),
+      only_ways(['normal'])
+      ],
+     compile_and_run,
+     ['-O'])
+
+test('T7850',
+     [stats_num_field('peak_megabytes_allocated', (4, 1)),
+      only_ways(['normal'])],
      compile_and_run,
      ['-O'])
 
