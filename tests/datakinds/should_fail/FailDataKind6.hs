@@ -1,6 +1,6 @@
 {-# LANGUAGE DataKinds #-}
 
-module DataKind6 where
+module FailDataKind6 where
 
 data kind K = K
 

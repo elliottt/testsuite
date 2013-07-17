@@ -1,7 +1,7 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE PolyKinds #-}
 {-# LANGUAGE KindSignatures #-}
-module DataKind7 where
+module FailDataKind7 where
 
 -- unholy recursion
 data kind K = T Foo
