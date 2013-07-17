@@ -1,5 +1,5 @@
 
-DataKind4.hs:7:11:
+FailDataKind4.hs:7:11:
     Multiple declarations of ‛K’
-    Declared at: DataKind4.hs:6:11
-                 DataKind4.hs:7:11
+    Declared at: FailDataKind4.hs:6:11
+                 FailDataKind4.hs:7:11
