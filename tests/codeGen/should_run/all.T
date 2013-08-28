@@ -76,7 +76,7 @@ test('cgrun069', omit_ways(['ghci']), multi_compile_and_run,
                  ['cgrun069', [('cgrun069_cmm.cmm', '')], ''])
 test('cgrun070', normal, compile_and_run, [''])
 test('cgrun071', normal, compile_and_run, [''])
-test('cgrun072', expect_broken(7902), compile_and_run, [''])
+test('cgrun072', normal, compile_and_run, [''])
 
 test('T1852', normal, compile_and_run, [''])
 test('T1861', extra_run_opts('0'), compile_and_run, [''])
@@ -112,4 +112,5 @@ test('Word2Float64', unless(wordsize(64), skip), compile_and_run, [''])
 
 test('T7361', normal, compile_and_run, [''])
 test('T7600', normal, compile_and_run, [''])
-
+test('T8103', only_ways(['normal']), compile_and_run, [''])
+test('T7953', normal, compile_and_run, [''])
